@@ -45,6 +45,9 @@ gsettings set org.gnome.desktop.screensaver primary-color '#000000'
 # Turn off blank screen timeout
 gsettings set org.gnome.desktop.session idle-delay 0
 
+# Turn off auto suspend when plugged in
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+
 # Disable visual vim
 echo "set mouse-=a" >> ~/.vimrc
 
