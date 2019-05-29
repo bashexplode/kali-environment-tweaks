@@ -25,6 +25,9 @@ gnome-shell-extension-tool -e window-list@gnome-shell-extensions.gcampax.github.
 # Remove terminal transparency
 dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-transparency-percent 0
 
+# Nautilus default list view
+gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+
 # Download applications
 apt install terminator -y 
 
