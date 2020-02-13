@@ -20,8 +20,8 @@ rm -r ~/Videos/
 sed -i 's/\${debian_chroot:+($debian_chroot)}\\\[\\033\[01;31m\\\]\\u@\\h\\\[\\033\[00m\\\]:\\\[\\033\[01;34m\\\]\\w\\\[\\033\[00m\\\]\\\$/\\\[\\e\[1;32m\\\]\[\\d \\A\] \${debian_chroot:+(\$debian_chroot)}\\\[\\033\[01;31m\\\]\\u@\\h\\\[\\033\[00m\\\]:\\\[\\033\[01;33m\\\]\\w\\\[\\033\[00m\\\]\\\$/g' ~/.bashrc
 
 # Remove terminal transparency and change theme to white on black
-sed -i 's/ApplicationTransparency=5/ApplicationTransparency=0/g' ~/.config/qterminal.org/qterminal.ini
-sed -i 's/colorScheme=Kali-Dark/colorScheme=WhiteOnBlack/g' ~/.config/qterminal.org/qterminal.ini
+sed -i 's/ApplicationTransparency=5/ApplicationTransparency=0/g' /etc/xdg/qterminal.org/qterminal.ini
+sed -i 's/colorScheme=Kali-Dark/colorScheme=WhiteOnBlack/g' /etc/xdg/qterminal.org/qterminal.ini
 
 # Thunar default list view?
 
