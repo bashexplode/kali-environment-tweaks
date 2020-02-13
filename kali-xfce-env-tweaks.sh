@@ -25,6 +25,13 @@ sed -i 's/colorScheme=Kali-Dark/colorScheme=WhiteOnBlack/g' /etc/xdg/qterminal.o
 
 # Thunar default list view?
 
+# Disable screensaver on AC power and switch battery sleep to 30mins and suspend to 60mins
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/blank-on-ac -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-off -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-battery-off -s 60
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-battery-sleep -s 30
+
 # Download applications
 apt install terminator -y 
 
